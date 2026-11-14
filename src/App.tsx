@@ -6,6 +6,7 @@ import { SmoothScroll } from './components/SmoothScroll';
 import { ScrollToTop } from './components/ScrollToTop';
 import { AppointmentModal } from './components/AppointmentModal';
 import { Preloader } from './components/Preloader';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 import { HomePage } from './pages/HomePage';
 
@@ -41,6 +42,9 @@ export const App: React.FC = () => {
 
           {/* Studio Footer */}
           <Footer />
+
+          {/* Floating Bottom-Right WhatsApp Quick Contact */}
+          <FloatingWhatsApp />
 
           {/* Global Appointment Consultation Modal */}
           <AppointmentModal
