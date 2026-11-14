@@ -7,36 +7,20 @@ export const FloatingWhatsApp: React.FC = () => {
   const whatsappUrl =
     'https://wa.me/919500975083?text=Hello%20Ar.%20Karthikraja%20G,%20I%20would%20like%20to%20inquire%20about%20an%20architectural%20consultation%20with%20Nedunthatchan%20Architects.';
 
-  // One-time mobile pop UI prompt
+  // Pop up in 3 seconds, stay for 3 seconds, then cleanly dismiss
   useEffect(() => {
-    try {
-      const alreadyShown = sessionStorage.getItem('nt_wa_pop_shown');
-      if (alreadyShown) return;
+    const popTimer = setTimeout(() => {
+      setShowPop(true);
+    }, 3000);
 
-      // Pop up 3 seconds after site loads
-      const timer = setTimeout(() => {
-        setShowPop(true);
-        sessionStorage.setItem('nt_wa_pop_shown', 'true');
-      }, 3000);
+    const dismissTimer = setTimeout(() => {
+      setShowPop(false);
+    }, 6000);
 
-      // Auto dismiss after 7 seconds
-      const autoDismiss = setTimeout(() => {
-        setShowPop(false);
-      }, 10000);
-
-      return () => {
-        clearTimeout(timer);
-        clearTimeout(autoDismiss);
-      };
-    } catch {
-      // Fallback if sessionStorage is restricted
-      const timer = setTimeout(() => setShowPop(true), 3000);
-      const autoDismiss = setTimeout(() => setShowPop(false), 10000);
-      return () => {
-        clearTimeout(timer);
-        clearTimeout(autoDismiss);
-      };
-    }
+    return () => {
+      clearTimeout(popTimer);
+      clearTimeout(dismissTimer);
+    };
   }, []);
 
   const handleDismissPop = (e: React.MouseEvent) => {
