@@ -188,6 +188,7 @@ export const Hero: React.FC = () => {
             className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-light tracking-tight leading-[0.95] max-w-5xl text-balance"
           >
             Create the <span className="italic font-light">unimaginable</span>.
+            <span className="sr-only"> — Best Architects in Erode &amp; Tamil Nadu | Nedunthatchan Architects</span>
           </motion.h1>
         </div>
 
@@ -200,7 +201,7 @@ export const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="text-sm md:text-base text-white/80 font-light max-w-md leading-relaxed tracking-wide"
           >
-            Nedunthatchan Architects orchestrates bespoke architectural works and luxury interiors defined by sculptural light, quiet proportion, and honest materiality.
+            Nedunthatchan Architects is an award-winning architectural firm in Erode, orchestrating bespoke luxury villas, modern residences, and turnkey interiors defined by sculptural light and honest materiality.
           </motion.p>
 
           {/* Explore Button: Slides from Right */}

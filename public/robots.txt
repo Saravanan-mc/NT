@@ -1,0 +1,39 @@
+# ==============================================================================
+# NEDUNTHATCHAN ARCHITECTS — PRODUCTION ROBOTS.TXT
+# Optimized for Googlebot, Bingbot, Applebot, and Local Search Indexing
+# ==============================================================================
+
+User-agent: *
+Allow: /
+Allow: /public/
+Allow: /designs/
+Allow: /assets/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.mp4$
+Allow: /*.svg$
+Disallow: /dist/
+Disallow: /node_modules/
+
+# Priority Googlebot Crawl Directives
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Image Crawling for Google Image Search (Portfolio Renders)
+User-agent: Googlebot-Image
+Allow: /designs/
+Allow: /public/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap Index Declaration
+Sitemap: https://nedunthatchan.com/sitemap.xml
+Host: https://nedunthatchan.com
