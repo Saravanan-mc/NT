@@ -14,7 +14,7 @@ export const Hero: React.FC = () => {
   // - Mobile: 0.0s to 7.0s
   useEffect(() => {
     const setupVideoLoop = (video: HTMLVideoElement | null, startTime: number, endTime: number) => {
-      if (!video) return () => {};
+      if (!video) return () => { };
 
       const handleLoadedMetadata = () => {
         if (startTime > 0) {
@@ -31,13 +31,13 @@ export const Hero: React.FC = () => {
       const handleTimeUpdate = () => {
         if (video.currentTime >= endTime) {
           video.currentTime = startTime;
-          video.play().catch(() => {});
+          video.play().catch(() => { });
         }
       };
 
       const handleEnded = () => {
         video.currentTime = startTime;
-        video.play().catch(() => {});
+        video.play().catch(() => { });
       };
 
       if (video.readyState >= 1) {
